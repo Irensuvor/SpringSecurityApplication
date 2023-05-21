@@ -42,15 +42,15 @@
 </div>
 <form th:method="POST" th:action="@{/admin/orders/search}">
     <fieldset>
-        <legend>Выберите параметры для сортировки, поиска, фильтрации:</legend>
-        <label for="search">Поиск по наименованию</label>
+        <legend>Выберите параметры</legend>
+        <label for="search">Поиск по последним 4м цифрам</label>
         <input type="text" id="search" name="search" th:value="*{value_search}">
         <br>
         <input type="submit" value="Найти">
     </fieldset>
 </form>
 <hr>
-<h3>Результат поиска, cортировки, фильтрации</h3>
+<h3>Результат поиска</h3>
 <div th:each="order : ${search_order}">
     <h3 th:text="'Заказ №' + ${order.getNumber()}"></h3>
     <img th:src="'/img/' + ${order.getProduct().getImageList()[0].getFileName()}" width="300px">
