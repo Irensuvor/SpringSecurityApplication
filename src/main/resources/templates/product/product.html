@@ -3,6 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Cписок товаров</title>
+    <style>
+        form {
+            background: chocolate;
+        }
+        a {
+            text-decoration: none;
+            color: brown;
+        }
+
+        div {
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+            background: black;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 <h1>Главная страница магазина</h1>
@@ -27,12 +45,12 @@
                    value="sorted_by_descending_price">
             <label for="descending_price">Отсортировать по убыванию цены</label>
             <p>Категория товаров: </p>
-            <input type="radio" id="furniture" name="contract" value="furniture">
-            <label for="furniture">Мебель</label>
-            <input type="radio" id="appliances" name="contract" value="appliances">
-            <label for="appliances">Бытовая техника</label>
-            <input type="radio" id="clothes" name="contract" value="clothes">
-            <label for="clothes">Одежда</label>
+            <input type="radio" id="science" name="contract" value="science">
+            <label for="science">Научная и научно-популярная литература</label>
+            <input type="radio" id="child" name="contract" value="child">
+            <label for="child">Детская литература</label>
+            <input type="radio" id="artist" name="contract" value="artist">
+            <label for="artist">Художественная литература</label>
             <br>
             <br>
             <input type="submit" value="Найти">

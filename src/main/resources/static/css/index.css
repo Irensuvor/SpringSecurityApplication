@@ -2,3 +2,11 @@ a {
     text-decoration: none;
     color: brown;
 }
+div {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    background: black;
+    color: white;
+}

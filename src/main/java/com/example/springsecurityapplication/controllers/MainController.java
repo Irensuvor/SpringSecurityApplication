@@ -100,12 +100,12 @@ public class MainController {
             if(!price.isEmpty()){
                 if(price.equals("sorted_by_ascending_price")) {
                     if (!contract.isEmpty()) {
-                        if (contract.equals("furniture")) {
+                        if (contract.equals("science")) {
                             model.addAttribute("search_product", productRepository.findByTitleAndCategoryOrderByPriceAsc(search.toLowerCase(), Float.parseFloat(ot), Float.parseFloat(Do), 1));
-                        } else if (contract.equals("appliances")) {
-                            model.addAttribute("search_product", productRepository.findByTitleAndCategoryOrderByPriceAsc(search.toLowerCase(), Float.parseFloat(ot), Float.parseFloat(Do), 3));
-                        } else if (contract.equals("clothes")) {
+                        } else if (contract.equals("child")) {
                             model.addAttribute("search_product", productRepository.findByTitleAndCategoryOrderByPriceAsc(search.toLowerCase(), Float.parseFloat(ot), Float.parseFloat(Do), 2));
+                        } else if (contract.equals("artist")) {
+                            model.addAttribute("search_product", productRepository.findByTitleAndCategoryOrderByPriceAsc(search.toLowerCase(), Float.parseFloat(ot), Float.parseFloat(Do), 3));
                         }
                     } else {
                         model.addAttribute("search_product", productRepository.findByTitleOrderByPriceAsc(search.toLowerCase(), Float.parseFloat(ot), Float.parseFloat(Do)));
@@ -113,11 +113,11 @@ public class MainController {
                 } else if(price.equals("sorted_by_descending_price")){
                     if(!contract.isEmpty()){
                         System.out.println(contract);
-                        if(contract.equals("furniture")){
+                        if(contract.equals("science")){
                             model.addAttribute("search_product", productRepository.findByTitleAndCategoryOrderByPriceDesc(search.toLowerCase(), Float.parseFloat(ot), Float.parseFloat(Do), 1));
-                        }else if (contract.equals("appliances")) {
+                        }else if (contract.equals("child")) {
                             model.addAttribute("search_product", productRepository.findByTitleAndCategoryOrderByPriceDesc(search.toLowerCase(), Float.parseFloat(ot), Float.parseFloat(Do), 3));
-                        } else if (contract.equals("clothes")) {
+                        } else if (contract.equals("artist")) {
                             model.addAttribute("search_product", productRepository.findByTitleAndCategoryOrderByPriceDesc(search.toLowerCase(), Float.parseFloat(ot), Float.parseFloat(Do), 2));
                         }
                     }  else {
